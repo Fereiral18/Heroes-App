@@ -8,12 +8,13 @@ export const Navbar = () => {
         textDecoration: "underline",
       };
 
-      const { user } =  useContext(AuthContext)
+      const { user, logout } =  useContext(AuthContext)
      
 
       const navigate =  useNavigate()
      
     const onLogout = () =>{
+        logout();
         navigate('/login',{
         replace: true
     })
